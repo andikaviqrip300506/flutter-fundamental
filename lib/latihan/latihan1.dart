@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/main.dart';
 
 class MultipleContainersWidget extends StatelessWidget {
   @override
@@ -38,7 +37,6 @@ class MultipleContainersWidget extends StatelessWidget {
           padding: EdgeInsets.all(50),
           alignment: Alignment.center,
           color: Color.fromARGB(255, 62, 68, 97),
-          child: TextWidget(),
         )
 
       ],

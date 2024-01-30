@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/main.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);
@@ -20,7 +19,6 @@ class ContainerWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: const Color.fromARGB(255, 145, 145, 145), width: 3),
       ),
-      child: TextWidget(),
     );
   }
 }
