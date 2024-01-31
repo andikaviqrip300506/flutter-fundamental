@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/gridView/grid_view_builder.dart';
-import 'package:project_flutter/gridView/grid_view_count.dart';
-import 'package:project_flutter/latihan/list_view.dart';
-import 'package:project_flutter/navigator/firstRoute.dart';
-import 'package:project_flutter/navigator/secondRoute.dart';
+import 'package:project_flutter/latihan/fauna/fauna_form.dart';
+import 'package:project_flutter/latihan/gridv/grid_view_builder.dart';
+import 'package:project_flutter/latihan/gridv/grid_view_count.dart';
+import 'package:project_flutter/latihan/listv/list_view.dart';
+import 'package:project_flutter/latihan/navigator/firstRoute.dart';
+import 'package:project_flutter/latihan/navigator/secondRoute.dart';
+import 'package:project_flutter/latihan/fauna/list_fauna.dart';
 
 
 void main() {
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
           '/listview' : (context) => ListnView(),
           '/gridview' :(context) => GridCount(),
           '/gridbuilder' :(context) => GriddBuilder(),
+          '/listfauna': (context) => ListFaunaScreen(),
+          '/form' : (context) => FaunaForm()
     },
     );
   }
