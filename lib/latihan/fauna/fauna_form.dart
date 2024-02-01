@@ -20,6 +20,7 @@ class _FaunaFormState extends State<FaunaForm> {
   TextEditingController tiketController = TextEditingController();
   TextEditingController tglhrController = TextEditingController();
   String _pilihTempat = "";
+  String _gambarTempat = '';
 
   final List<String> tempat = [
     "Zoo Bandung",
@@ -38,15 +39,17 @@ class _FaunaFormState extends State<FaunaForm> {
   };
 
   final Map<String, String> gambarTempat = {
-  "Zoo Bandung": 'assets/image/zoo_bandung.jpg',
-  "Zoo Jakarta": 'assets/image/zoo_jakarta.jpg',
-  "Zoo Surabaya": 'assets/image/zoo_surabaya.jpg',
-  "Zoo Indramayu": 'assets/image/zoo_indramayu.jpg',
-  "Zoo Bekasi": 'assets/image/zoo_bekasi.jpg',
-};
+    "Zoo Bandung": 'assets/image/zoo.jpg',
+    "Zoo Jakarta": 'assets/image/harimau.jpg',
+    "Zoo Surabaya": 'assets/image/kucing.jpg',
+    "Zoo Indramayu": 'assets/image/tupai.jpg',
+    "Zoo Bekasi": 'assets/image/wolf.jpg',
+  };
 
   void initState() {
     tglhrController.text = '';
+     _gambarTempat =
+    gambarTempat[tempat[0]]!; // Inisialisasi dengan gambar tempat pertama
     super.initState();
   }
 
@@ -204,6 +207,7 @@ class _FaunaFormState extends State<FaunaForm> {
       String nama = namaController.text;
       String tiket = tiketController.text;
       String tempat = _pilihTempat;
+      String gambar = _gambarTempat;
       String tglhir = tglhrController.text;
 
       int jumlahTiket = int.tryParse(tiket) ?? 0;
@@ -218,6 +222,7 @@ class _FaunaFormState extends State<FaunaForm> {
             tiket: tiket,
             hargaPerTiket: hargaPerTiket,
             tglhir: tglhir,
+            gambar: gambar,
             tempat: tempat,
             totalHarga: totalHarga,
           ),

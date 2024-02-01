@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OutputFormScreen extends StatelessWidget {
-  final String nama, tiket, tglhir, tempat;
+  final String nama, tiket, tglhir, tempat, gambar;
   final int totalHarga, hargaPerTiket;
   OutputFormScreen(
       {Key? key,
@@ -9,6 +9,7 @@ class OutputFormScreen extends StatelessWidget {
       required this.tiket,
       required this.tglhir,
       required this.tempat,
+      required this.gambar,
       required this.hargaPerTiket,
       required this.totalHarga})
       : super(key: key);
@@ -38,7 +39,7 @@ class OutputFormScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                "assets/image/zoo.jpg",
+                gambar,
                 width: double.infinity,
                 height: 200.0,
               ),
